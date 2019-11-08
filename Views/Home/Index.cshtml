@@ -1,0 +1,21 @@
+﻿@model List<Dishes>
+  <div class="text-center">
+    <h3 class="display-4">Welcome to CRUDelicious</h3>
+    <br />
+    <div class="text-start">
+      <h5>Check out some recent dishes!</h5>
+    </div>
+    <br />
+    <h5 class="text-right" style="display: block">
+      <a href="/new">Add a Dish</a>
+    </h5>
+    <hr />
+    <br />
+    @foreach(Dishes dish in @Model) {
+    <div class="text-left">
+      <h5><a href="/@dish.DishID">@dish.Name</a> by @dish.Chef</h5>
+    </div>
+
+    }
+  </div>
+</Dishes>

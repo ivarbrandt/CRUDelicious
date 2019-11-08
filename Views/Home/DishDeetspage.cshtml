@@ -1,0 +1,28 @@
+@model Dishes
+
+<h5><a href="/">Home</a></h5>
+<div class="text-center">
+    <h3>@Model.Name</h3>
+    <h6>@Model.Chef</h6>
+    <br>
+    <hr>
+    <br>
+</div>
+<p>@Model.Description</p>
+<br>
+<p><strong>Calories:</strong> @Model.Calories</h3>
+<p><strong>Tastiness:</strong> @Model.Tastiness</>
+<br>
+<br>
+<div class="row" style="justify-content: center">
+    
+    <div class="col-sm-2">
+        <form action="/@Model.DishID" method="POST">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+    <div class="col-sm-2">
+        <a href="/edit/@Model.DishID" class="btn btn-outline-dark">Edit</a>
+    </div>
+</div>
+
